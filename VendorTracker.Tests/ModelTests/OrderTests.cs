@@ -47,10 +47,10 @@ namespace VendorTracker.TestTools
     {
       string orderTitle = "croissants";
       string description = "weekly";
-      int price = 35;
+      float price = 35;
 
       Order newOrder = new Order(orderTitle, description, price, "7/24/2020");
-      int result = newOrder.Price;
+      float result = newOrder.Price;
 
       Assert.AreEqual(price, result);
     }
@@ -60,7 +60,7 @@ namespace VendorTracker.TestTools
     {
       string orderTitle = "croissants";
       string description = "weekly";
-      int price = 35;
+      float price = 35;
       string date = "7/24/2020";
 
       Order newOrder = new Order(orderTitle, description, price,date);
@@ -74,7 +74,7 @@ namespace VendorTracker.TestTools
     {
       string orderTitle = "croissants";
       string description = "weekly";
-      int price = 35;
+      float price = 35;
       string date = "7/24/2020";
 
       Order newOrder = new Order(orderTitle, description, price,date);
