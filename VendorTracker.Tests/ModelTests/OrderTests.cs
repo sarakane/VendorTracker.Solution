@@ -1,11 +1,17 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using VendorTracker.Models;
+using System;
 
 namespace VendorTracker.TestTools
 {
   [TestClass]
-  public class OrderTest
+  public class OrderTest : IDisposable
   {
+    public void Dispose()
+    {
+      Order.ClearAll();
+    }
+
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
@@ -61,6 +67,20 @@ namespace VendorTracker.TestTools
       string result = newOrder.Date;
 
       Assert.AreEqual(date, result);
+    }
+
+    [TestMethod]
+    public void GetId_ItemsTenstantiateWithAnIdAndGetterReturns_Int()
+    {
+      string orderTitle = "croissants";
+      string description = "weekly";
+      int price = 35;
+      string date = "7/24/2020";
+
+      Order newOrder = new Order(orderTitle, description, price,date);
+      int result = newOrder.ID;
+
+      Assert.AreEqual(1, result);
     }
   }
 }
