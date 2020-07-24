@@ -6,8 +6,13 @@ using VendorTracker.Models;
 namespace VendorTracker.Tests
 {
   [TestClass]
-  public class VendorTest
+  public class VendorTest : IDisposable
   {
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
+    
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
@@ -37,6 +42,18 @@ namespace VendorTracker.Tests
       string result = newVendor.Description;
 
       Assert.AreEqual(description, result);
+    }
+
+    [TestMethod]
+    public void GetId_ReturnsVendorId_Int()
+    {
+      string name = "test";
+      string description = "test";
+      Vendor newVendor = new Vendor(name, description);
+
+      int result = newVendor.Id;
+
+      Assert.AreEqual(1, result);
     }
   }
 }
