@@ -9,7 +9,7 @@ namespace VendorTracker.Models
     public string Description { get; }
     public int Price { get; } 
     public string Date { get; }
-    public int ID { get; }
+    public int Id { get; }
 
     public Order(string orderTitle, string description, int price, string date)
     {
@@ -18,7 +18,7 @@ namespace VendorTracker.Models
       Price = price;
       Date = date;
       _orderInstances.Add(this);
-      ID = _orderInstances.Count;
+      Id = _orderInstances.Count;
     }
 
     public static void ClearAll()
