@@ -35,5 +35,18 @@ namespace VendorTracker.TestTools
 
       Assert.AreEqual(description, result);
     }
+
+    [TestMethod]
+    public void GetPrince_ReturnsPrice_Int()
+    {
+      string orderTitle = "croissants";
+      string description = "weekly";
+      int price = 35;
+
+      Order newOrder = new Order(orderTitle, description, price,"7/24/2020");
+      int result = newOrder.Price;
+
+      Assert.AreEqual(price, result);
+    }
   }
 }
