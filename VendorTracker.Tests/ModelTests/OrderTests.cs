@@ -15,7 +15,7 @@ namespace VendorTracker.TestTools
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order("test", "test", 1,"test");
+      Order newOrder = new Order("test", "test", 1, "test");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
   
@@ -24,7 +24,7 @@ namespace VendorTracker.TestTools
     {
       string orderTitle = "croissants";
 
-      Order newOrder = new Order(orderTitle, "weekly", 35,"7/24/2020");
+      Order newOrder = new Order(orderTitle, "weekly", 35, "7/24/2020");
       string result = newOrder.OrderTitle;
 
       Assert.AreEqual(orderTitle, result);
@@ -36,7 +36,7 @@ namespace VendorTracker.TestTools
       string orderTitle = "croissants";
       string description = "weekly";
 
-      Order newOrder = new Order(orderTitle, description, 35,"7/24/2020");
+      Order newOrder = new Order(orderTitle, description, 35, "7/24/2020");
       string result = newOrder.Description;
 
       Assert.AreEqual(description, result);
@@ -49,7 +49,7 @@ namespace VendorTracker.TestTools
       string description = "weekly";
       int price = 35;
 
-      Order newOrder = new Order(orderTitle, description, price,"7/24/2020");
+      Order newOrder = new Order(orderTitle, description, price, "7/24/2020");
       int result = newOrder.Price;
 
       Assert.AreEqual(price, result);
@@ -81,6 +81,17 @@ namespace VendorTracker.TestTools
       int result = newOrder.ID;
 
       Assert.AreEqual(1, result);
+    }
+
+    [TestMethod]
+    public void Find_ReturnsCorrectItem_Item()
+    {
+      Order newOrder1 = new Order("test1", "test1", 1, "test1");
+      Order newOrder2 = new Order("test2", "test2", 1, "test2");
+
+      Order result = Order.Find(2);
+      
+      Assert.AreEqual(newOrder2, result);
     }
   }
 }

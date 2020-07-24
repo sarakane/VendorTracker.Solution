@@ -25,5 +25,10 @@ namespace VendorTracker.Models
     {
       _orderInstances.Clear();
     }
+
+    public static Order Find(int searchId)
+    {
+      return new Order("test", "test", 1, "test");
+    }
   }
 }
