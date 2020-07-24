@@ -30,8 +30,12 @@ namespace VendorTracker.Controllers
     [HttpGet("/vendors/{id}")]
     public ActionResult Show(int id)
     {
+      Dictionary<string, object> model = new Dictionary<string, object>();
       Vendor newVendor = Vendor.Find(id);
-      return View(newVendor);
+      List<Order> vendorOrders = newVendor.Orders;
+      model.Add("vendor", newVendor);
+      model.Add("orders", vendorOrders);
+      return View(model);
     }
   }
 }
