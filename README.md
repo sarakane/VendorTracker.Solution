@@ -41,7 +41,12 @@ Once the repository has been cloned, navigate to the to the application director
 
 ## Technologies Used
 * Visual Studio Code (code editor)
-* C#/.NET
+* C#
+* .NET Core 2.2
+* MSTest
+* MVC
+* RESTful Routing
+* Git
 
 ## License
 This software is licensed under the MIT license. Copyright (c) 2020 Sara Kane.
