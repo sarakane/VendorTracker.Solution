@@ -23,5 +23,10 @@ namespace VendorTracker.Models
     {
       _vendorInstances.Clear();
     }
+
+    public static List<Vendor> GetAll()
+    {
+      return new List<Vendor>{};
+    }
   }
 }
