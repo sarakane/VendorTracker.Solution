@@ -10,7 +10,7 @@ namespace VendorTracker.Models
     public Order(string orderTitle, string description, int price, string date)
     {
       OrderTitle = orderTitle;
-      Description = "";
+      Description = description;
       Price = 0;
       Date = "";
     }
