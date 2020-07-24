@@ -11,7 +11,7 @@ namespace VendorTracker.Models
     {
       OrderTitle = orderTitle;
       Description = description;
-      Price = 0;
+      Price = price;
       Date = "";
     }
   }
