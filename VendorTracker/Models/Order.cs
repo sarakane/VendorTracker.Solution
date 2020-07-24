@@ -28,7 +28,7 @@ namespace VendorTracker.Models
 
     public static Order Find(int searchId)
     {
-      return new Order("test", "test", 1, "test");
+      return _orderInstances[searchId - 1];
     }
   }
 }
