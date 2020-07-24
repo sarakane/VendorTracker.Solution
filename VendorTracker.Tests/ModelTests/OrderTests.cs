@@ -23,5 +23,17 @@ namespace VendorTracker.TestTools
 
       Assert.AreEqual(orderTitle, result);
     }
+
+    [TestMethod]
+    public void GetDescription_ReturnsDescription_String()
+    {
+      string orderTitle = "croissants";
+      string description = "weekly";
+
+      Order newOrder = new Order(orderTitle, description, 35,"7/24/2020");
+      string result = newOrder.Description;
+
+      Assert.AreEqual(description, result);
+    }
   }
 }
