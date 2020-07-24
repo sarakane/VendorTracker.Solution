@@ -3,12 +3,11 @@
 }
 
 <div class="container">
-  <h1>Order Details:</h3>
-  <h2>Vendor: @Model["vendor"].Name</h2>
-  <h2>Order Title: @Model["order"].OrderTitle</h2>
-  <h2>Description: @Model["order"].Description</h2>
-  <h2>Price: @Model["order"].Price.ToString("C")</h2>
-  <h2>Date: @Model["order"].Date</h2>
-  <h4><a href='/vendors/@Model["vendor"].Id'>Return to vendor</a></h4>
-  <h4><a href="/vendors">View all vendors</a></h4>
+  <h1>Order Details for @Model["vendor"].Name:</h3>
+  <h3>Order Title: @Model["order"].OrderTitle</h3>
+  <h3>Description: @Model["order"].Description</h3>
+  <h3>Price: @Model["order"].Price.ToString("C")</h3>
+  <h3>Date: @Model["order"].Date</h3>
+  <a href='/vendors/@Model["vendor"].Id' class="badge badge-secondary">Return to vendor</a>
+  <a href="/vendors" class="badge badge-secondary">Return to all vendors</a>
 </div>
