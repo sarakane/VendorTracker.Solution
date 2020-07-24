@@ -18,8 +18,7 @@ namespace VendorTracker.Models
       Price = price;
       Date = date;
       _orderInstances.Add(this);
-      ID = 0; 
-      //_orderInstances.Count;
+      ID = _orderInstances.Count;
     }
 
     public static void ClearAll()
