@@ -10,9 +10,9 @@ MVC application to track vendors that order baked goods from a bakery.
 ## Specifications
 |                                                          Behavior                                                         | Input                             | Output                                                                                                       | Met? (Y/N) |
 |--------------------------------------------------------------------------------------------------------------------------|-----------------------------------|--------------------------------------------------------------------------------------------------------------|------------|
-| Program should create an Order object with properties for title, description, price, and date                             | croissants, weekly, 35, 7/24/2020 | Order newOrder = new Order() {OrderTitle = "croissants", Description = "weekly", Price=35, Date="7/24/2020"} | N          |
-| Program should create a Vendor object with properties for name, description, and a list of order belonging to the vendor  | Suzie's Cafe, small cafe          | Vendor newVendor = new Vendor() {VendorName = "Suzie's Cafe", Description = "small cafe"}                    | N          |
-| Program should add an order object to a Vendor object                                                                     | add newOrder to newVendor         | Suzie's Cafe {OrderTitle = "croissants"}                                                                     | N          |
+| Program should create an Order object with properties for title, description, price, and date                             | croissants, weekly, 35, 7/24/2020 | Order newOrder = new Order() {OrderTitle = "croissants", Description = "weekly", Price=35, Date="7/24/2020"} | Y          |
+| Program should create a Vendor object with properties for name, description, and a list of order belonging to the vendor  | Suzie's Cafe, small cafe          | Vendor newVendor = new Vendor() {VendorName = "Suzie's Cafe", Description = "small cafe"}                    | Y          |
+| Program should add an order object to a Vendor object                                                                     | add newOrder to newVendor         | Suzie's Cafe {OrderTitle = "croissants"}                                                                     | Y          |
 
 ## Known Bugs
 * No known bugs.   
